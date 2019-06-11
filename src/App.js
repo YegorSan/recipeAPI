@@ -34,8 +34,8 @@ render() {
       <Form getRecipe={this.getRecipe} />
       { this.state.recipes.map((recipe) => {
         return (
-         <div>
-           <p key={ recipe.recipe_id }>{ recipe.title }</p>
+         <div key={ recipe.recipe_id }>
+           <p>{ recipe.title }</p>
            <img src={recipe.image_url} alt=""></img>
          </div>
 
