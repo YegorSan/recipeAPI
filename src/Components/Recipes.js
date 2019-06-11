@@ -2,19 +2,21 @@ import React from 'react';
 
 const Recipes = props => (
 
-    <div>
+    <div >
 
-{ props.recipes.map((recipe) => {
+     { props.recipes.map((recipe) => {
+
         return (
-         <div key={ recipe.recipe_id }>
-           <p>{ recipe.title }</p>
-           <img src={recipe.image_url} alt=""></img>
+         <div className="recipe-container"  >   
+         <div className="recipe" key={ recipe.recipe.label } >
+           <p>{ recipe.recipe.label }</p>
+           <img src={recipe.recipe.image} alt=""></img>
          </div>
-
-        )
+        </div>
+        );
       }) }
 
-    </div>
+</div>
 
 );
 

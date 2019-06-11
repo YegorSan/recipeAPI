@@ -3,14 +3,15 @@ import Form from './Components/Form';
 import Recipes from './Components/Recipes';
 import './App.css';
 
-const apiKEY = "e554d6e6b7b7478c20343d202492929e";
-
+const apiKEY = "3761d3233d355bf763d0cadf69d27ac8";
+const appID = "a04adced"
 
 class App extends Component  {
 
   state = {
 
-    recipes: [] 
+    recipes: [] ,
+
 
 
   }
@@ -19,10 +20,12 @@ class App extends Component  {
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
 
-    const apiCall = await fetch(`https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${apiKEY}&q=${recipeName}`);
+    const apiCall = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${appID}&app_key=${apiKEY}`);
 
     const data = await apiCall.json();
-    this.setState({recipes: data.recipes});
+
+    this.setState({recipes: data.hits});
+
     console.log(this.state.recipes);
   }
 
