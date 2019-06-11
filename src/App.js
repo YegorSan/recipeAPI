@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './Components/Form';
+import Recipes from './Components/Recipes';
 import './App.css';
 
 const apiKEY = "e554d6e6b7b7478c20343d202492929e";
@@ -32,15 +33,7 @@ render() {
         REACT RECIPES APP
       </header>
       <Form getRecipe={this.getRecipe} />
-      { this.state.recipes.map((recipe) => {
-        return (
-         <div key={ recipe.recipe_id }>
-           <p>{ recipe.title }</p>
-           <img src={recipe.image_url} alt=""></img>
-         </div>
-
-        )
-      }) }
+      <Recipes recipes={this.state.recipes}/>
     </div>
   );
 }
