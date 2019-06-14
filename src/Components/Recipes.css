@@ -1,0 +1,111 @@
+
+h3 {
+  font-size:0.9em;
+  font-weight:900;
+  color:#FFF;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+
+}
+.recipe {
+  
+  border-radius: 39px;
+  background: bisque;
+  margin-bottom: 25px; 
+
+}
+.image {
+  height: 250px;
+  overflow: hidden;
+  
+  border-radius: 0px 36px 0px 0px;
+}
+.image img{
+  width:100%;
+  transition: all 1s ease;
+ 
+}
+.image:hover img{
+  transform: scale(1.2) rotate(-3deg);
+  -ms-transform: scale(1.2) rotate(-3deg); /* IE 9 */
+  -webkit-transform: scale(1.2) rotate(-3deg); /* Safari and Chrome */
+}
+.fa-heart-o:hover {
+  animation-name: pulse; 
+  animation-duration: 0.5s; 
+  animation-iteration-count: infinite; 
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 0.5s; 
+  -webkit-animation-iteration-count: infinite; 
+}
+.likes {
+  width:45px;
+  height:35px;
+  background:#EC4678;
+  opacity: 0.85;
+  
+  -webkit-border-radius:0 5px 5px 0px;
+  border-radius:0 5px 5px 0px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 2px rgba(214, 22, 80, 1);
+  border-left:5px dotted #D61650;
+}
+.name {
+  
+  font-size: 20px;
+  text-align: center;
+}
+.media {
+
+}
+.media li {
+  display:inline-block;
+ font-size: 15px;
+}
+
+a:link, a:visited {color: #339187; text-decoration:none;font-weight:700;}
+a:hover {color: rgb(22, 214, 198);text-decoration:none;}
+a:active {text-decoration:underline;}
+
+/* Pulse Animation for Firefox, Opera and Internet Explorer 10 */
+@keyframes pulse {
+  from {
+    transform: scale(1.0);
+    opacity: 1.0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1.0;
+  }
+  to { 
+    transform: scale(1.0);
+    opacity: 1.0;
+  }
+}
+/* Pulse Animation for Google Chrome and Safari */
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 1.0;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+    opacity: 1.0;
+  }
+}
+
+.button {
+  padding: 10px;
+  margin-bottom: 20px;
+}

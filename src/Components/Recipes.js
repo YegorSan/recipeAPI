@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "./Recipes.css"
 const Recipes = props => (
+
 
     <div className="recipe-container">
 
@@ -9,25 +11,34 @@ const Recipes = props => (
         return (
             
          <div className="recipe" key={ recipe.recipe.label } >
-           <p>{ recipe.recipe.label }</p>
+           
+           <div className="image">
            <img src={recipe.recipe.image} alt=""></img>
-           <p>{ recipe.recipe.calories }</p> 
-           <ol>
+           </div>
+          
+           <div className="name">
+           <p>{ recipe.recipe.label.length < 20 `${recipe.recipe.label}` }</p>
+           </div>
+         
+           
+       
+           <ul className="media">
+		       <li>Weight:   { Math.floor(recipe.recipe.totalWeight) }</li>
+		       <li>Calories:   { Math.floor(recipe.recipe.calories) }</li>
+		       <li>Servings:   { recipe.recipe.yield }</li>
+  		     </ul>
 
-           { recipe.recipe.ingredients.map(ingredient => ( 
-               <li>{ingredient.text}</li>
+           
 
-           )) }
-
-           </ol>
             <button className="button">
              <Link to={{
                  pathname: `/recipe/${recipe.recipe.label}` ,
 
                  state: {recipe: recipe.recipe.label}
-                 
+
                  }}>View Recipe</Link>
              </button>
+
          </div>
         
         );
@@ -38,3 +49,4 @@ const Recipes = props => (
 );
 
 export default Recipes;
+

@@ -1,15 +1,7 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #e05b26;
   min-height: 30vh;
   display: flex;
   flex-direction: column;
@@ -19,31 +11,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.recipe-container {
-
-  display: flex;
-  flex-wrap: wrap;
-
-  
-}
 
 
 
-.recipe {
-flex: 1;
-  
-}
