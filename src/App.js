@@ -20,7 +20,7 @@ class App extends Component  {
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
 
-    const apiCall = await fetch(`https://api.edamam.com/search?q=${recipeName}&app_id=${appID}&app_key=${apiKEY}`);
+    const apiCall = await fetch(`https://api.edamam.com/search?q=${recipeName}&app_id=${appID}&app_key=${apiKEY}&from=0&to=12`);
 
     const data = await apiCall.json();
 

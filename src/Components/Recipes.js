@@ -10,39 +10,28 @@ const Recipes = props => (
 
         return (
             
-         <div className="recipe" key={ recipe.recipe.label } >
-           
-           <div className="image">
-           <img src={recipe.recipe.image} alt=""></img>
-           </div>
-          
-           <div className="name">
-           <p>{ recipe.recipe.label.length < 20 `${recipe.recipe.label}` }</p>
-           </div>
+          <figure className="single-recipe" key={ recipe.recipe.label }><img src={recipe.recipe.image} alt="sample87"/>
+          <figcaption>
+            <h3>{ recipe.recipe.label.length < 20 ? `${recipe.recipe.label}` : `${recipe.recipe.label.substring(0, 25)}...`  }</h3>
+            <h5>Calories:   { Math.floor(recipe.recipe.calories) }</h5>
+              <h6><Link to={{
+                         pathname: `/recipe/${recipe.recipe.label}` ,
+        
+                         state: {recipe: recipe.recipe.label}
+        
+                         }}>View Recipe</Link></h6>
          
-           
+          </figcaption>
        
-           <ul className="media">
-		       <li>Weight:   { Math.floor(recipe.recipe.totalWeight) }</li>
-		       <li>Calories:   { Math.floor(recipe.recipe.calories) }</li>
-		       <li>Servings:   { recipe.recipe.yield }</li>
-  		     </ul>
-
-           
-
-            <button className="button">
-             <Link to={{
-                 pathname: `/recipe/${recipe.recipe.label}` ,
-
-                 state: {recipe: recipe.recipe.label}
-
-                 }}>View Recipe</Link>
-             </button>
-
-         </div>
+          </figure>
         
         );
       }) }
+
+
+      
+
+
 
 </div>
 
