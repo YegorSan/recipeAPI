@@ -1,6 +1,5 @@
 
-
-.App-header {
+.app-footer {
   background-color: rgba(51, 51, 51, 0.9);
   min-height: 30vh;
   display: flex;
@@ -11,6 +10,16 @@
   color: white;
 }
 
+.navigation {
+display: flex;
+padding: 10px;
+background: rgba(232, 14, 14, 0.8);
+align-items: center;
+}
 
-
-
+.navigation li {
+list-style: none;
+color: wheat;
+padding: 5px;
+text-transform: uppercase;
+}

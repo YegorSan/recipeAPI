@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import "./Recipe.css"
-const apiKEY = "3761d3233d355bf763d0cadf69d27ac8";
-const appID = "a04adced";
+const apiKEY = "017f9c50833c30e90a06cc268d539da6";
+const appID = "c88305ec";
 
 
 class Recipe extends React.Component {
@@ -26,7 +26,7 @@ class Recipe extends React.Component {
     return (
       <div className="recipe-container">
         { this.state.activeRecipe.length !== 0 &&
-          <div className="single-recipe">
+          <div className="recipe">
             <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
             <h3>{ recipe.recipe.label }</h3>
             <ol>
